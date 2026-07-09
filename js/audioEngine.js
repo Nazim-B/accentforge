@@ -4,9 +4,9 @@
 // this is simpler and more reliable than the manual AVAudioEngine approach
 // the native version needed.
 'use strict';
+(function () {
 
-var AF = window.AF || {};
-window.AF = AF;
+var AF = window.AF = window.AF || {};
 
 AF.AudioEngine = class AudioEngine {
   constructor(audioElement) {
@@ -109,3 +109,4 @@ AF.AudioEngine = class AudioEngine {
     this.el.removeEventListener('timeupdate', this._onTimeUpdate);
   }
 };
+})();
