@@ -1,9 +1,9 @@
 // warmup.js — fixed exercise bank + daily rotation. Same content/philosophy as
 // the Swift version: not "365 unique days", a maintainable bank rotated by day.
 'use strict';
+(function () {
 
-var AF = window.AF || {};
-window.AF = AF;
+var AF = window.AF = window.AF || {};
 
 AF.WarmupBank = [
   // Breathing
@@ -100,3 +100,4 @@ AF.getWarmupSessionSet = function getWarmupSessionSet(date = new Date()) {
   }
   return result;
 };
+})();
