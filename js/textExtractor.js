@@ -2,9 +2,9 @@
 // pulls raw text out of TXT/PDF, no chapter/layout detection. The user reviews
 // the "Full text" panel and manually copies the right chunk into each segment.
 'use strict';
+(function () {
 
-var AF = window.AF || {};
-window.AF = AF;
+var AF = window.AF = window.AF || {};
 
 AF.TextExtractor = {
   async extractText(file, textType) {
@@ -38,3 +38,4 @@ AF.TextExtractor = {
     return fullText;
   },
 };
+})();
