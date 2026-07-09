@@ -3,9 +3,9 @@
 // recording and playback have different lifecycle/permission concerns and
 // mixing them is a common source of bugs.
 'use strict';
+(function () {
 
-var AF = window.AF || {};
-window.AF = AF;
+var AF = window.AF = window.AF || {};
 
 AF.Recorder = class Recorder {
   constructor() {
@@ -90,3 +90,4 @@ AF.Recorder = class Recorder {
     }
   }
 };
+})();
