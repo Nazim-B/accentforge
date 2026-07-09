@@ -7,7 +7,7 @@
 //   stats        single record with key "singleton": { dailyLogs:[{dateKey,practiceSeconds,segmentsCompleted}], totalSegmentsCompleted }
 'use strict';
 
-const AF = window.AF || {};
+var AF = window.AF || {};
 window.AF = AF;
 
 AF.DB = (() => {
