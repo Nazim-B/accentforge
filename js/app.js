@@ -3,7 +3,7 @@
 // would add more risk than it removes.
 'use strict';
 
-const AF = window.AF || {};
+var AF = window.AF || {};
 window.AF = AF;
 
 AF.state = {
