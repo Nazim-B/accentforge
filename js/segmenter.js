@@ -6,7 +6,7 @@
 // confirmation before being used in Shadowing. Do not skip that step.
 'use strict';
 
-const AF = window.AF || {};
+var AF = window.AF || {};
 window.AF = AF;
 
 AF.AudioSegmenter = {
