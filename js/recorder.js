@@ -4,7 +4,7 @@
 // mixing them is a common source of bugs.
 'use strict';
 
-const AF = window.AF || {};
+var AF = window.AF || {};
 window.AF = AF;
 
 AF.Recorder = class Recorder {
