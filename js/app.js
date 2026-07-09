@@ -172,7 +172,7 @@ function renderImportView() {
   const titleInput = el('input', { class: 'input', placeholder: 'Например: Harry Potter — Stephen Fry' });
   form.appendChild(labeled('Название', titleInput));
 
-  const audioInput = el('input', { type: 'file', accept: 'audio/*' });
+  const audioInput = el('input', { type: 'file' });
   form.appendChild(labeled('Аудиофайл', audioInput));
 
   const textInput = el('input', { type: 'file', accept: '.pdf,.txt,text/plain,application/pdf' });
@@ -192,6 +192,14 @@ function renderImportView() {
       status.textContent = 'Заполните название и выберите оба файла.';
       status.classList.add('error');
       return;
+    }
+    const looksLikeAudio = audioFile.type.startsWith('audio')
+      || /\.(mp3|m4a|m4b|wav|aac|ogg|flac|opus)$/i.test(audioFile.name);
+    if (!looksLikeAudio) {
+      const proceed = confirm(
+        `Файл «${audioFile.name}» не похож на аудио (тип: ${audioFile.type || 'неизвестен'}). Продолжить всё равно?`
+      );
+      if (!proceed) return;
     }
     submitBtn.disabled = true;
     status.classList.remove('error');
