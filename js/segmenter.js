@@ -5,9 +5,9 @@
 // These boundaries are a STARTING POINT — always shown to the user for manual
 // confirmation before being used in Shadowing. Do not skip that step.
 'use strict';
+(function () {
 
-var AF = window.AF || {};
-window.AF = AF;
+var AF = window.AF = window.AF || {};
 
 AF.AudioSegmenter = {
   config: {
@@ -100,3 +100,4 @@ AF.AudioSegmenter = {
     return merged;
   },
 };
+})();
