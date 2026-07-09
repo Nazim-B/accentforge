@@ -2,9 +2,9 @@
 // without a build step, and the whole app is small enough that a framework
 // would add more risk than it removes.
 'use strict';
+(function () {
 
-var AF = window.AF || {};
-window.AF = AF;
+var AF = window.AF = window.AF || {};
 
 AF.state = {
   tab: 'warmup',      // warmup | library | recordings | stats
@@ -589,3 +589,4 @@ document.querySelectorAll('.tab-btn').forEach((btn) => {
 });
 
 render();
+})();
