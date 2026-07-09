@@ -3,7 +3,7 @@
 // the "Full text" panel and manually copies the right chunk into each segment.
 'use strict';
 
-const AF = window.AF || {};
+var AF = window.AF || {};
 window.AF = AF;
 
 AF.TextExtractor = {
