@@ -6,7 +6,7 @@
 // browser will keep serving the old version from cache.
 'use strict';
 
-const CACHE_NAME = 'accentforge-shell-v3';
+const CACHE_NAME = 'accentforge-shell-v4';
 const SHELL_FILES = [
   './',
   './index.html',
