@@ -6,9 +6,9 @@
 //   recordings   { id, bookId, chapterId, segmentId, blob, mime, date, duration }
 //   stats        single record with key "singleton": { dailyLogs:[{dateKey,practiceSeconds,segmentsCompleted}], totalSegmentsCompleted }
 'use strict';
+(function () {
 
-var AF = window.AF || {};
-window.AF = AF;
+var AF = window.AF = window.AF || {};
 
 AF.DB = (() => {
   const DB_NAME = 'accentforge';
@@ -137,3 +137,4 @@ AF.computeStreak = function computeStreak(stats) {
   }
   return streak;
 };
+})();
